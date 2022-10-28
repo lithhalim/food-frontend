@@ -1,0 +1,90 @@
+
+.checkout-container{
+    display: flex; width: 100vw; padding: 50px; justify-content: space-between; flex-wrap: wrap;
+    margin-top: 30px;
+    .container-add-cart {
+         height: 80vh; width: 60vw;
+        .header-addtocard {
+            display: flex; font-weight: bold; justify-content: space-between; padding: 5px;
+            text-transform: capitalize;
+        }
+        .item-container-section {
+            font-weight: bold;
+            img {
+                height: 150px; width: 150px;
+            }
+        }
+        .quintity-button-section{
+            font-size: 1.4em;  font-weight: bold; width: 200px; text-align: center;
+            display: flex; align-items: center; justify-content: space-around;
+                li{
+                    span {
+                        cursor: pointer;
+                    }
+                    &:nth-child(2){
+                        margin-bottom: 7px;
+                    }
+                }
+        }
+    
+        .price-item-section{
+            font-size: 1.4em;  font-weight: bold; text-align: center;
+            width: 200px;
+        }
+    }
+    
+    .checkou-button-section {
+        width: 28vw; border-radius: 5px; margin-top: 30px;
+        border: 1px solid rgba(192, 192, 192, 0.644); padding: 10px;
+    }
+}
+
+
+
+
+
+
+//----------------------------------------------side section ----------------------------------------------------//
+
+.checkou-button-section {
+    h3 {
+        padding: 10px 0px;
+    }
+    p {
+        padding: 10px 0px;
+    }
+    .Order-container ul  {
+        padding: 10px 0px;
+        display: flex; justify-content: space-between;
+    }
+    button {
+        width: 100%; height: 45px; background-color: black ; color: white; font-weight: bold;
+        font-size: 1.3em; cursor: pointer; 
+    }
+
+    .AcceptOrder {
+        margin-top: 50px;
+        .container-accept-pay {
+            display: grid; grid-template-columns: repeat(auto-fill,minmax(70px,1fr));
+            gap: 15px;
+        }
+        img {
+            width: 100%; height: 35px;
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    .checkout-container{
+        display: block;
+        .container-add-cart {
+            width: 84vw;
+        }
+        .checkou-button-section{
+            width: 84vw; margin-top: 50px;border-radius: 5px;
+            border: 1px solid rgba(192, 192, 192, 0.644); padding: 10px;
+        }
+    
+    }
+    
+}

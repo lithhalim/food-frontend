@@ -1,0 +1,21 @@
+.reguster-holder {
+    position: relative; height: 50px; transition: all .5s;
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.925); transition:  all .5s;
+    }
+    &:hover .bar-section-element        {
+            display: block; transition: all .5s;
+        }
+    
+    .bar-section-element {
+        position: absolute; left: -50px; top: 50px; background-color: rgba(255, 255, 255, 0.959); z-index: 1000000000;
+         display: none; border: 2px solid black; 
+        .element{
+            text-transform: capitalize; font-size: .6em;padding: 10px 30px; transition: all .5s; border-radius: 2px;
+             border-bottom: .5px solid black; width: 180px;
+            &:hover{
+                font-weight: bold; transform: scale(1.2em);
+            }
+        }
+    }
+}
