@@ -30,3 +30,17 @@
     }
     
 }
+@media screen and (max-width:500px) {
+    .Header-information-section {
+        &::after{
+            content: "";
+            left: 80%;
+        }
+        &::before{
+            content: "";
+            left: -30%;
+        }
+    
+    }
+
+}
