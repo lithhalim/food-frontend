@@ -41,3 +41,21 @@
         }
     } 
 }
+
+@media screen and (max-width:500px) {
+    .arabic-inner{
+        padding: 50px 15px;
+        .image-container{
+            width: 90vw; height: 50vh;
+        }
+        .text-area{
+            font-size: .8em;
+            h3 {
+                font-size: .9em;
+            }
+        }
+    }
+
+}
+
+

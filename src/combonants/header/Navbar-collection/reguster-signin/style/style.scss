@@ -8,7 +8,7 @@
         }
     
     .bar-section-element {
-        position: absolute; left: -50px; top: 50px; background-color: rgba(255, 255, 255, 0.959); z-index: 1000000000;
+        position: absolute; left: -140px; top: 50px; background-color: rgba(255, 255, 255, 0.959); z-index: 1000000000;
          display: none; border: 2px solid black; 
         .element{
             text-transform: capitalize; font-size: .6em;padding: 10px 30px; transition: all .5s; border-radius: 2px;
@@ -18,4 +18,16 @@
             }
         }
     }
+}
+
+
+@media screen and (max-width:500px) {
+    .reguster-holder{
+        .bar-section-element {
+            left: -140px;
+            .element{
+                padding: 10px; font-size: .6em; font-weight: bold;
+            }
+        }
+    }   
 }

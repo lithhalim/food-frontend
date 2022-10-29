@@ -1,4 +1,5 @@
-import React,{useState} from 'react';
+import React,{useContext, useState} from 'react';
+import {Login_Create_Context} from "../../../context-api/authntication-context"
 
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
@@ -6,7 +7,8 @@ import axios from 'axios';
 
 
 function Update_Pass() {
-    const [stateUpdata,setstateUpdata]=useState<any>(false)
+    const [stateUpdata,setstateUpdata]=useState<any>(false);
+    const UpdateContext=useContext(Login_Create_Context)
 
     const initialValues={
         code: '',
@@ -15,9 +17,9 @@ function Update_Pass() {
     const getData=(event:any)=>{
         let data={regusterid:event.code,password:event.newPassword}
         axios.post(`${process.env.REACT_APP_API}updatePass`,data).then((data)=>{
-            console.log(data)
             if(data.status==200){
                 setstateUpdata({result:"The Password Updated"})
+                UpdateContext.setforgetPassword(false)
             }else{
                 setstateUpdata({result:"Worng Verification Code"})
 

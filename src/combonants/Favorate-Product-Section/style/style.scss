@@ -124,3 +124,21 @@
         text-align: center;
     }
 }
+
+
+
+
+@media screen and (max-width:500px) {
+    .Favorate-container{
+        padding: 50px 5px;
+                .container-Favorate {
+            width: 95vw; 
+        }
+        .checkou-button-section{
+            width: 95vw; padding: 5px;
+        }
+    
+    }
+
+    
+}

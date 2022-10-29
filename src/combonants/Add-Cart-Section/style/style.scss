@@ -88,3 +88,19 @@
     }
     
 }
+
+
+@media screen and (max-width:500px) {
+
+    .checkout-container{
+        padding: 50px 5px;
+        .container-add-cart {
+            width: 95vw;
+        }
+        .checkou-button-section{
+            width: 95vw; padding: 5px;
+        }
+    
+    
+    }
+}

@@ -32,12 +32,16 @@ function Signin_Section_Have() {
             headers:{ 'Content-Type': 'application/json' ,'Accept': 'application/json',"authorization":`BASIC ${decoded}` }
           }).then((x)=>{
                 //send the accsess Token To User To Useit
-                loginContext.setsignin(false);
+                if(x.data.accessToken=="Error Email Or Password"){
+                  setStatusEmail("Wrong Email Or Password")
+                }else{
+                  loginContext.setsignin(false);
+                  setStatusEmail(false)
+                }
                 const decoded = jwt_decode(x.data.accessToken);
                 window.localStorage.SaveAuthnticaiton=JSON.stringify(decoded);
                 loginContext.setAllUserData(decoded)
             }).catch((errors)=>{
-              console.log(errors)
                 //if The Email Or The Password ARE WRONG
                 setStatusEmail("Wrong Email Or Password")
             });
