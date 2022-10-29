@@ -28,7 +28,7 @@ function App() {
                   <PageContext_Provider>
                       <BrowserRouter>
                         <Routes>
-                          <Route path='/' element={<><Header_Main/><Slider_Homepage/><Arabic_Food/> <Slider_Specific/> <Slider_Specific/> <Signin_Section_Have/><Signup_Section/>  <Footer_Section/></>}/>
+                          <Route path='/' element={<><Header_Main/><Slider_Homepage/><Arabic_Food datause="first"/> <Slider_Specific/><Arabic_Food datause="last"/> <Slider_Specific/> <Signin_Section_Have/><Signup_Section/>  <Footer_Section/></>}/>
                             <Route path='/addCart' element={<><Header_Main/> <Add_To_Card/> <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
                               <Route path='/favorate' element={<><Header_Main/> <Favorate_Product/> <Signin_Section_Have/><Signup_Section/><Footer_Section/> </>}/>
                               <Route path='/page' element={<> <Header_Main/><Select_Page_Section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>

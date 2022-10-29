@@ -1,0 +1,88 @@
+@use "../../../../main-style/style.scss";
+
+
+//--------------------------------------header search -------------------------------------//
+.selector-header-section{
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;  border-bottom: 1px solid black; padding: 15px 15px;
+  background-color: black;color:white;
+  
+  h1 {
+    font-size: 1em;
+  }
+  button {
+    border:none;  cursor: pointer;font-size: .8em;
+    font-weight: bold; background-color: black;
+    color: white; padding: 3px 15px;
+  }
+}
+
+
+//---------------------------------button show result data -------------------------------------------------//
+.show-result-search-item-add {
+  width: 100%; background-color: black; padding: 10px;color: white; font-weight: bold;
+  display: flex; justify-content: space-between; margin-top: 15px; margin-bottom: 20px;
+  cursor: pointer; text-align: center; font-size: .9em; display: flex; justify-content: center;
+
+
+}
+
+
+.selector-container-section {
+  max-height: 35vh; overflow-y: scroll;width: 100%;
+}
+
+
+
+//-----------------------------------------select item ------------------------------------------------//
+.multiselect {
+    width: 100%; overflow-y: scroll;
+    .selectBox {
+      position: relative; cursor: pointer;
+          select {
+            border: none;
+            width: 100%; padding: 10px; border-bottom: 1px solid black;
+            font-weight: bold; border-collapse: collapse;
+          }
+    }
+    .overSelect {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  
+  
+  }
+  
+  
+  
+  
+  #checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+    max-height: 250px;font-size: .8em; font-weight: bold;
+    input{
+      border-radius: 50%; width: 15px; height: 15px; margin-right: 5px;
+    }
+  }
+  
+  
+
+  #checkboxes label {
+    display: flex; padding: 5px; align-items: center; padding: 5px;
+    &:hover {
+      background-color: #1e8fff71; transition: all .5s; cursor: pointer;
+    }
+    
+  }
+
+
+
+  @media screen and (max-width:1100px) {
+    .multiselect {
+      background-color: white; width: 100%;
+
+    }
+  }
