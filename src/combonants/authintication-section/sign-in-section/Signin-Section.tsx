@@ -9,6 +9,7 @@ import axios from 'axios';
 import jwt_decode from "jwt-decode";
 import { Login_Create_Context } from '../../../context-api/authntication-context';
 import {motion} from "framer-motion"
+import Forget_Password from '../foret-password/Forget_Password';
 
 
 
@@ -59,6 +60,12 @@ const signupSectioon=()=>{
   loginContext.setsignup(true)
 }
 
+
+const gotoSelect=()=>{
+  loginContext.setsignin(false);
+  loginContext.setforgetPassword(true);
+}
+
   return (
     <>
             {loginContext.signin!==false?
@@ -87,7 +94,8 @@ const signupSectioon=()=>{
                                                 <Field  type="password" placeholder="Password"  name='password' />
                                                 {errors.password && touched.password ? <div className='error-section'>{errors.password}</div> : null}
                                         </div>
-                    
+
+                                            <p  onClick={gotoSelect} className='forget-password'>Forget Password Click Here....</p>
                                             <button className='submit-botton' type="submit">Sign In</button>
                     
                                             <p className='special-text' style={{color:"red",marginTop:"10px"}}>{statusEmail!==false?<span>{statusEmail}</span>:<></>} </p>
@@ -101,11 +109,14 @@ const signupSectioon=()=>{
                 </motion.div>:<></>
             
             }
+            {loginContext.forgetPassword?<Forget_Password/>:<></>}
     </>
   )
 }
 
 export default Signin_Section_Have
+
+
 
 
 
