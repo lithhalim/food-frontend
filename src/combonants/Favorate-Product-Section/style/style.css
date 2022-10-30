@@ -1,0 +1,200 @@
+.Favorate-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  padding: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.Favorate-container .container-Favorate {
+  height: 80vh;
+  width: 60vw;
+}
+
+.Favorate-container .container-Favorate .header-Favorate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  text-transform: capitalize;
+}
+
+.Favorate-container .container-Favorate .item-container-section {
+  font-weight: bold;
+}
+
+.Favorate-container .container-Favorate .item-container-section img {
+  height: 150px;
+  width: 150px;
+}
+
+.Favorate-container .container-Favorate .quintity-button-section {
+  font-size: 1.4em;
+  font-weight: bold;
+  width: 200px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.Favorate-container .container-Favorate .quintity-button-section li span {
+  cursor: pointer;
+}
+
+.Favorate-container .container-Favorate .quintity-button-section li:nth-child(2) {
+  margin-bottom: 7px;
+}
+
+.Favorate-container .container-Favorate .price-item-section {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+}
+
+.Favorate-container .checkou-button-section {
+  width: 28vw;
+  border-radius: 5px;
+  margin-top: 30px;
+  border: 1px solid rgba(192, 192, 192, 0.644);
+  padding: 10px;
+}
+
+.Favorate-container .remove-buttom, .Favorate-container .view-buttom {
+  padding: 8px 30px;
+  background-color: rgba(0, 0, 75, 0.89);
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1em;
+  cursor: pointer;
+  border: none;
+}
+
+.Favorate-container .remove-buttom {
+  background-color: rgba(70, 1, 1, 0.945);
+}
+
+.checkou-button-section h3 {
+  padding: 10px 0px;
+}
+
+.checkou-button-section p {
+  padding: 10px 0px;
+}
+
+.checkou-button-section .Order-container ul {
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.checkou-button-section button {
+  width: 100%;
+  height: 45px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.checkou-button-section .AcceptOrder {
+  margin-top: 50px;
+}
+
+.checkou-button-section .AcceptOrder .container-accept-pay {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(70px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 15px;
+}
+
+.checkou-button-section .AcceptOrder img {
+  width: 100%;
+  height: 35px;
+}
+
+@media screen and (max-width: 900px) {
+  .Favorate-container {
+    display: block;
+  }
+  .Favorate-container .container-Favorate {
+    width: 84vw;
+  }
+  .Favorate-container .checkou-button-section {
+    width: 84vw;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: 1px solid rgba(192, 192, 192, 0.644);
+    padding: 10px;
+  }
+}
+
+.checkou-button-section .favoratelist-containet li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.checkou-button-section .favoratelist-containet li img {
+  width: 49%;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.favorate-list {
+  margin-top: 30px;
+}
+
+.favorate-list h3 {
+  text-align: center;
+}
+
+.favorate-list p {
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .Favorate-container {
+    padding: 50px 5px;
+  }
+  .Favorate-container .container-Favorate {
+    width: 95vw;
+  }
+  .Favorate-container .checkou-button-section {
+    width: 95vw;
+    padding: 5px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

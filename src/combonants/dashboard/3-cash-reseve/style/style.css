@@ -1,0 +1,12 @@
+.container-cash {
+  margin-top: 50px;
+  width: 27%;
+}
+
+@media screen and (max-width: 1200px) {
+  .container-cash {
+    margin-top: 50px;
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

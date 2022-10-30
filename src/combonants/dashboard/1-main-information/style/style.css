@@ -1,0 +1,28 @@
+.container-main-information {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  color: #535353;
+}
+
+.container-main-information .containercard {
+  padding: 15px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.74);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.74);
+  background-color: rgba(192, 192, 192, 0.233);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container-main-information .containercard p {
+  padding: 10px 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

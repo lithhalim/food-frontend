@@ -1,0 +1,57 @@
+.reguster-holder {
+  position: relative;
+  height: 50px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.reguster-holder:hover {
+  background-color: rgba(255, 255, 255, 0.925);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.reguster-holder:hover .bar-section-element {
+  display: block;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.reguster-holder .bar-section-element {
+  position: absolute;
+  left: -140px;
+  top: 50px;
+  background-color: rgba(255, 255, 255, 0.959);
+  z-index: 1000000000;
+  display: none;
+  border: 2px solid black;
+}
+
+.reguster-holder .bar-section-element .element {
+  text-transform: capitalize;
+  font-size: .6em;
+  padding: 10px 30px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  border-radius: 2px;
+  border-bottom: .5px solid black;
+  width: 180px;
+}
+
+.reguster-holder .bar-section-element .element:hover {
+  font-weight: bold;
+  -webkit-transform: scale(1.2em);
+          transform: scale(1.2em);
+}
+
+@media screen and (max-width: 500px) {
+  .reguster-holder .bar-section-element {
+    left: -140px;
+  }
+  .reguster-holder .bar-section-element .element {
+    padding: 10px;
+    font-size: .6em;
+    font-weight: bold;
+  }
+}
+/*# sourceMappingURL=style.css.map */

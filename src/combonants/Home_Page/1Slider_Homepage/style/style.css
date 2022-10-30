@@ -1,0 +1,103 @@
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-pagination-bullet {
+  background-color: #000 !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin-left: 20px !important;
+}
+
+.sliderItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sliderItem img {
+  width: 50vw;
+  height: 70vh;
+  overflow: hidden;
+  min-width: 400px;
+}
+
+.sliderItem .text-area {
+  width: 50vw;
+  height: 70vh;
+  overflow: hidden;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 70px;
+}
+
+.sliderItem .text-area h3 {
+  font-size: 2.5em;
+  text-transform: capitalize;
+  font-weight: 300;
+  padding: 10px 0px;
+}
+
+.sliderItem .text-area p {
+  padding: 10px 0px;
+}
+
+.sliderItem .text-area button {
+  padding: 10px 45px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .sliderItem {
+    display: block;
+  }
+  .sliderItem img {
+    width: 100vw;
+    height: 60vh;
+  }
+  .sliderItem .text-area {
+    width: 100vw;
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sliderItem img {
+    width: 100vw;
+    height: 45vh;
+  }
+  .sliderItem .text-area {
+    font-size: .8em;
+    margin-top: 30px;
+  }
+  .sliderItem .text-area h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+}
+/*# sourceMappingURL=style.css.map */

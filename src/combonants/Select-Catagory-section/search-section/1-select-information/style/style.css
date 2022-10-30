@@ -1,0 +1,133 @@
+@use "../../../../main-style/style.scss";
+.selector-header-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 15px 15px;
+  background-color: black;
+  color: white;
+}
+
+.selector-header-section h1 {
+  font-size: 1em;
+}
+
+.selector-header-section button {
+  border: none;
+  cursor: pointer;
+  font-size: .8em;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  padding: 3px 15px;
+}
+
+.show-result-search-item-add {
+  width: 100%;
+  background-color: black;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-size: .9em;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.selector-container-section {
+  width: 100%;
+}
+
+.multiselect {
+  width: 100%;
+}
+
+.multiselect .selectBox {
+  position: relative;
+  cursor: pointer;
+}
+
+.multiselect .selectBox select {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  border-collapse: collapse;
+  border-left: 1px solid black;
+  border-right: 1px  solid black;
+}
+
+.multiselect .overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px black solid;
+  max-height: 250px;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+#checkboxes input {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+#checkboxes label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+#checkboxes label:hover {
+  background-color: #1e8fff71;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .multiselect {
+    background-color: white;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .selector-header-section {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

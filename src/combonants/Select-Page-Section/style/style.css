@@ -1,0 +1,154 @@
+.select-apage-container {
+  padding: 50px 50px;
+}
+
+.select-apage-container .first-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.select-apage-container .first-section .image-container {
+  width: 40vw;
+  height: 60vh;
+}
+
+.select-apage-container .first-section .image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.select-apage-container .first-section .text-container {
+  width: 45vw;
+}
+
+.select-apage-container .first-section .text-container li {
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(2) {
+  background-color: green;
+  padding: 5px 20px;
+  color: white;
+  font-weight: bold;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 10px;
+  font-size: .8em;
+  border-radius: 5px;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(3) {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(5) .delevery h3 {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(5) .delevery .freedelevery {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: .9em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(5) .delevery .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(5) .delevery .container span {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(5) .delevery .container p {
+  font-weight: bold;
+  color: #252525;
+  font-size: .8em;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0px;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(4) .specific-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 8px 50px;
+  cursor: pointer;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(4) .specific-item span {
+  margin-right: 5px;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(6) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  font-size: .9em;
+  color: #252525;
+}
+
+.select-apage-container .first-section .text-container li:nth-child(6) span {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 900px) {
+  .select-apage-container {
+    padding: 50px 5px;
+  }
+  .select-apage-container .first-section {
+    display: block;
+  }
+  .select-apage-container .first-section .image-container {
+    width: 88vw;
+  }
+  .select-apage-container .first-section .text-container {
+    width: 88vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .select-apage-container .first-section {
+    display: block;
+  }
+  .select-apage-container .first-section .image-container {
+    width: 95vw;
+    height: 40vh;
+  }
+  .select-apage-container .first-section .text-container {
+    width: 95vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

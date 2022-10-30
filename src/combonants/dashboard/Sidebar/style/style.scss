@@ -1,0 +1,40 @@
+$background:rgba(192, 192, 192, 0.233);
+$shadow:2px 2px 2px rgba(0, 0, 0, 0.74);
+$color1:rgb(83, 83, 83);
+.side-bar-dashboard{
+    background-color:$background;height: 100vh; 
+    box-shadow: $shadow;position: sticky; left: 0; top: 0;
+    padding: 10px 5px; text-transform: capitalize;
+    .header-dashboard{
+        text-align: center;
+        img {
+            width:70px; height: 70px; border-radius: 50%;
+        }
+        h3 {
+            padding: 5px; color: $color1;
+        }
+        p{
+            padding: 5px; font-size: .7em; font-weight: bold;
+        }
+    }
+
+    .select-item-dashboard{
+        .catagory{
+            padding: 10px;color:$color1;
+        }
+        .item{
+            margin-left: 20px; font-size: 1em; padding: 7px 0px; display: flex; align-items: center;
+            cursor: pointer; 
+            span {
+                margin-right: 5px; font-size: 1.2em;
+                &:last-child{
+                    font-weight: bold; font-size: .8em;
+                }
+            }
+
+            &:hover{
+                transition: all .5s; color: rgb(3, 3, 129); transform: scale(1.2em);
+            }
+        }
+    }
+}

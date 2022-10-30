@@ -1,0 +1,107 @@
+.arabic-inner {
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: black;
+  color: white;
+  margin: 100px 0px 0px 0px;
+}
+
+.arabic-inner .image-container {
+  width: 40vw;
+  height: 80vh;
+}
+
+.arabic-inner .image-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.arabic-inner .text-area {
+  width: 50vw;
+  height: 60vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.arabic-inner .text-area h2 {
+  padding: 15px;
+}
+
+.arabic-inner .text-area p {
+  font-weight: bold;
+  font-size: .9em;
+  line-height: 4vh;
+}
+
+.arabic-inner .text-area h3 {
+  color: orangered;
+  padding: 15px;
+  font-size: 1.7em;
+  margin-top: 15px;
+  overflow-x: hidden;
+}
+
+.arabic-inner .text-area button {
+  padding: 10px 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 15px;
+  background-color: orangered;
+  color: black;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .arabic-inner {
+    display: block;
+  }
+  .arabic-inner .image-container {
+    width: 85vw;
+  }
+  .arabic-inner .text-area {
+    margin-top: 50px;
+    width: 85vw;
+  }
+  .arabic-inner .text-area h3 {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .arabic-inner {
+    padding: 50px 15px;
+  }
+  .arabic-inner .image-container {
+    width: 90vw;
+    height: 50vh;
+  }
+  .arabic-inner .text-area {
+    font-size: .8em;
+  }
+  .arabic-inner .text-area h3 {
+    font-size: .9em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

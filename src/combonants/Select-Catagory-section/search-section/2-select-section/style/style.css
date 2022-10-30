@@ -1,0 +1,53 @@
+@use "../../../../main-style/style.scss";
+.container-all-search {
+  width: 19.7vw;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 140px;
+  max-height: 50vh;
+}
+
+.container-all-search .price-section {
+  background-color: white;
+  z-index: 1000;
+  border-left: 1px  solid black;
+  padding: 25px 0px 0px 0px;
+  border-right: 1px solid black;
+}
+
+.container-all-search .price-section label {
+  margin-top: 15px;
+  display: block;
+  padding: 0px 10px;
+}
+
+.container-all-search .price-section input {
+  width: 90%;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container-all-search {
+    width: 22vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container-all-search {
+    display: none;
+  }
+  .container-all-search.active {
+    display: block;
+    width: 98vw;
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    left: 0;
+    top: 176px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

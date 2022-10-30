@@ -1,0 +1,159 @@
+@use "../../main-style/style.scss";
+.signin-container {
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.705);
+  position: fixed;
+  left: 0;
+  top: 16.8vh;
+  z-index: 100000;
+  height: 84vh;
+}
+
+.signin-container .signin-container-section {
+  width: 40vw;
+  background-color: white;
+  margin-top: 20px;
+  padding: 60px  30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px  1px 1px  1px  black;
+          box-shadow: 1px  1px 1px  1px  black;
+}
+
+.signin-container .signin-container-section .signup-header {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5em;
+}
+
+.signin-container .forget-password {
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.signin-container .submit-botton {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 50px;
+  border-radius: 10px;
+  border: none;
+  display: block;
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: black;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: white;
+}
+
+.signin-container .container-input {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.signin-container .container-input input {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  display: block;
+  padding: 10px;
+  text-transform: capitalize;
+  padding-left: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.705);
+  font-weight: bold;
+}
+
+.signin-container .container-input .error-section {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signin-container .container-input span {
+  position: absolute;
+  left: 90px;
+  top: 8px;
+  font-size: 1.5em;
+}
+
+.signin-container .container-header-sign {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.signin-container .container-header-sign .icon-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 1.8em;
+  cursor: pointer;
+  z-index: 1000000000000000000000000000;
+}
+
+.signin-container .special-text {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signin-container .special-text span {
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 1100px) {
+  .signin-container {
+    position: fixed;
+    left: 0;
+    top: 14vh;
+  }
+  .signin-container .signin-container-section {
+    width: 80vw;
+  }
+  .signin-container .container-input span {
+    left: 130px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .signin-container .container-input span {
+    left: 90px;
+  }
+  .signin-container {
+    position: fixed;
+    left: 0;
+    top: 14vh;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .signin-container .signin-container-section {
+    width: 100vw;
+  }
+  .signin-container .container-input span {
+    left: 70px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

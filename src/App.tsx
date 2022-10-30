@@ -17,6 +17,7 @@ import Favorate_Product from './combonants/Favorate-Product-Section/Favorate_Pro
 import Select_Page_Section from './combonants/Select-Page-Section/Select_Page_Section';
 import Footer_Section from './combonants/footer/Footer_Section';
 import Select_Catagory_section from './combonants/Select-Catagory-section/Select_Catagory_section';
+import Main_Dashboard from './combonants/dashboard/Main-Dashboard';
 
 
 
@@ -31,6 +32,7 @@ function App() {
                           <Route path='/' element={<><Header_Main/><Slider_Homepage/><Arabic_Food datause="first"/> <Slider_Specific/><Arabic_Food datause="last"/> <Slider_Specific/> <Signin_Section_Have/><Signup_Section/>  <Footer_Section/></>}/>
                             <Route path='/addCart' element={<><Header_Main/> <Add_To_Card/> <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
                               <Route path='/favorate' element={<><Header_Main/> <Favorate_Product/> <Signin_Section_Have/><Signup_Section/><Footer_Section/> </>}/>
+                                <Route path='/dashboard' element={<> <Main_Dashboard/> </>}/>
                               <Route path='/page' element={<> <Header_Main/><Select_Page_Section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
                             <Route path='/catagory' element={<> <Header_Main/><Select_Catagory_section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
                           <Route path='*' element={<><Page_Not_Found/></>}/>

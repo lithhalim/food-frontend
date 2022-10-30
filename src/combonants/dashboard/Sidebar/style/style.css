@@ -1,0 +1,70 @@
+.side-bar-dashboard {
+  background-color: rgba(192, 192, 192, 0.233);
+  height: 100vh;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.74);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.74);
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
+  padding: 10px 5px;
+  text-transform: capitalize;
+}
+
+.side-bar-dashboard .header-dashboard {
+  text-align: center;
+}
+
+.side-bar-dashboard .header-dashboard img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.side-bar-dashboard .header-dashboard h3 {
+  padding: 5px;
+  color: #535353;
+}
+
+.side-bar-dashboard .header-dashboard p {
+  padding: 5px;
+  font-size: .7em;
+  font-weight: bold;
+}
+
+.side-bar-dashboard .select-item-dashboard .catagory {
+  padding: 10px;
+  color: #535353;
+}
+
+.side-bar-dashboard .select-item-dashboard .item {
+  margin-left: 20px;
+  font-size: 1em;
+  padding: 7px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.side-bar-dashboard .select-item-dashboard .item span {
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+
+.side-bar-dashboard .select-item-dashboard .item span:last-child {
+  font-weight: bold;
+  font-size: .8em;
+}
+
+.side-bar-dashboard .select-item-dashboard .item:hover {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  color: #030381;
+  -webkit-transform: scale(1.2em);
+          transform: scale(1.2em);
+}
+/*# sourceMappingURL=style.css.map */
