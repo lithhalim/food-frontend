@@ -10,11 +10,11 @@
 
 .container-catagory{
     .showitem-section{
-        position: fixed;left: 50px ;top: 107px; background-color: white; background-color: white; width: 100vw;
+        position: fixed;left: 0px ;top: 107px; background-color: white; background-color: white; width: 100vw;
         height: 70px;cursor: pointer;
         z-index: 1000; display: none;
         span {
-            display: block; width: 150px; margin-top: 15px;
+            display: block; width: 150px; margin-top: 15px; margin-left: 50px;
             padding: 8px 20px ;border: 2px solid black; font-weight: bold; text-transform: capitalize;
         }
     }

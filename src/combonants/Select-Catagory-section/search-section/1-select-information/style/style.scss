@@ -21,7 +21,7 @@
 //---------------------------------button show result data -------------------------------------------------//
 .show-result-search-item-add {
   width: 100%; background-color: black; padding: 10px;color: white; font-weight: bold;
-  display: flex; justify-content: space-between; margin-top: 15px; margin-bottom: 20px;
+  display: flex; justify-content: space-between; margin-top: 50px; margin-bottom: 20px;
   cursor: pointer; text-align: center; font-size: .9em; display: flex; justify-content: center;
 
 
@@ -29,20 +29,22 @@
 
 
 .selector-container-section {
-  max-height: 35vh; overflow-y: scroll;width: 100%;
+ width: 100%;
 }
+
 
 
 
 //-----------------------------------------select item ------------------------------------------------//
 .multiselect {
-    width: 100%; overflow-y: scroll;
+    width: 100%; 
     .selectBox {
       position: relative; cursor: pointer;
           select {
             border: none;
             width: 100%; padding: 10px; border-bottom: 1px solid black;
             font-weight: bold; border-collapse: collapse;
+            border-left: 1px solid black;border-right: 1px  solid black;
           }
     }
     .overSelect {
@@ -61,7 +63,7 @@
   
   #checkboxes {
     display: none;
-    border: 1px #dadada solid;
+    border: 1px black solid;
     max-height: 250px;font-size: .8em; font-weight: bold;
     input{
       border-radius: 50%; width: 15px; height: 15px; margin-right: 5px;
@@ -84,5 +86,12 @@
     .multiselect {
       background-color: white; width: 100%;
 
+    }
+  }
+
+
+  @media screen and (max-width:900px) {
+    .selector-header-section{
+      width: 100%;
     }
   }

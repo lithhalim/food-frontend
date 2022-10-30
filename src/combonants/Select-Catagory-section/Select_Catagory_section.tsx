@@ -31,7 +31,7 @@ function Select_Catagory_section() {
   return (
     <div className='container-catagory'>
       
-      <p onClick={showFilter} className="showitem-section"><span>{state}</span></p>
+      <p className="showitem-section"><span onClick={showFilter} >{state}</span></p>
 
         <div className='catagory-section'>
           <DataChange getDataSelect={getDataSelect}/>
