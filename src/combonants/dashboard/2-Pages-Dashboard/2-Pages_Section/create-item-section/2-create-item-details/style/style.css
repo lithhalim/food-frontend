@@ -1,0 +1,140 @@
+@use "../../../../main-style/style.scss";
+.contaiber-car-details {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.contaiber-car-details select {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: black;
+  padding: 5px;
+  font-size: 1.1em;
+}
+
+.contaiber-car-details select option {
+  color: black;
+}
+
+.contaiber-car-details .submit-button {
+  background-color: rgba(0, 0, 0, 0.349);
+  color: white;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  font-size: 1.4em;
+}
+
+.contaiber-car-details .submit-button.active {
+  cursor: pointer;
+  background-color: black;
+}
+
+.container-inputs {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.container-inputs .input-section {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: black;
+  padding: 5px;
+  font-size: 1.1em;
+}
+
+.container-inputs .submit-button-section {
+  display: block;
+  padding: 10px 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.container-inputs .stylebutton {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  display: block;
+  padding: 0px 30px;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-inputs .stylebutton span {
+  margin-left: 10px;
+  font-size: 1.4em;
+  margin-top: 4px;
+}
+
+.container-inputs .error-section {
+  color: red;
+  padding: 10px 5px;
+  margin-top: -20px;
+}
+
+.saverOption {
+  color: red;
+}
+
+.saverOption img {
+  width: 40px;
+  height: 40px;
+}
+
+.container-image-upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  overflow-x: scroll;
+  gap: 15px;
+}
+
+.container-image-upload .style-image-section {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.container-image-upload .style-image-section:hover {
+  -webkit-transform: scale(4em);
+          transform: scale(4em);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+/*# sourceMappingURL=style.css.map */

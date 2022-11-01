@@ -1,8 +1,7 @@
 import React from 'react'
-import Main_Information from './1-main-information/Main_Information'
-import { RevineuCharts } from './2-revinue-chart/Revenue_Charts'
-import { CashResive } from './3-cash-reseve/Cash_Reseve';
+import Header_Dashboard from './header-dashboard/Header_Dashboard';
 import Sidebar_Dashboard from './Sidebar/Sidebar_Dashboard';
+import Slider_Dashboard from './Slider-Dashboard/Slider_Dashboard';
 
 import "./style/style.scss"
 
@@ -13,16 +12,9 @@ function Main_Dashboard() {
           <Sidebar_Dashboard/>
         </div>
         <div className='all-item-dashbard'>
-          <div className='container-header'>
-            <h3>DASHBOARD</h3>
-            <p>welcome to you dashboard</p>
-          </div>
-          <Main_Information/>
-          <div className='first-charts'>
-            <RevineuCharts/>
-            <CashResive/>
-          </div>
-        </div>      
+            <Header_Dashboard/>
+            <Slider_Dashboard/>      
+        </div>
     </div>
   )
 }

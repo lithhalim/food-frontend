@@ -25,7 +25,7 @@ function Card_Main_Information({datause}:any) {
         </li>
 
         <li className='icons-section'>
-            <p style={{fontSize:"1.8em"}}>{customData?.icon}</p>
+            <p style={{fontSize:"1.4em"}}>{customData?.icon}</p>
             <p>{datause.data}</p>
         </li>
     </ul>

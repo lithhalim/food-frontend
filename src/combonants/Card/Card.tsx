@@ -16,13 +16,13 @@ interface DataInter{
 
 
 function Card_Section({datause}:any) {
-   const {image,name}=datause
+   const {postImages,productName}=datause
   return (
         <div className='crad_container'>
             <div className='imagecontainer'>
-                <img src={image} alt="" />
+                <img src={postImages[0].ImageId} alt="" />
             </div>
-            <p className='nameProduct'> {name}</p>
+            <p className='nameProduct'> {productName}</p>
             <div className='icon-section'>
                 <ViewPage_Button datause={datause}/>
                 <Like_Button datause={datause}/>

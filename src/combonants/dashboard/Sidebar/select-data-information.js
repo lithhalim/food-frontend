@@ -1,4 +1,4 @@
-import {FcManager,FcOnlineSupport,FcPortraitMode} from "react-icons/fc";
+import {FcHome,FcOnlineSupport,FcPortraitMode} from "react-icons/fc";
 
 import {FcServices,FcTodoList} from "react-icons/fc"
 
@@ -7,21 +7,21 @@ import {FcDoughnutChart,FcElectricalThreshold,FcLineChart,FcProcess} from "react
 let Select_Dashboard_All_Data=[
     {type:"data"
         ,item:[
-            {icon:<FcManager/>,name:"Manager Team",page:"/Manegarteam"}
-           ,{icon:<FcOnlineSupport/>,name:"All Employes",page:"/employes"}
-           ,{icon:<FcPortraitMode/>,name:"All Custmoers",page:"/custmors"}]
+            {icon:<FcHome/>,name:"Dashboard Data",page:"0"}
+           ,{icon:<FcOnlineSupport/>,name:"All Employes",page:"1"}
+           ,{icon:<FcPortraitMode/>,name:"All Custmoers",page:"2"}]
     },
     {type:"Pages"
     ,item:[
-        {icon:<FcServices/>,name:"create Item",page:"/createItem"}
-       ,{icon:<FcTodoList/>,name:"All item ",page:"/all Item"}]
+        {icon:<FcServices/>,name:"create Item",page:"3"}
+       ,{icon:<FcTodoList/>,name:"All item ",page:"4"}]
     },
     {type:"Charts"
     ,item:[
-        {icon:<FcLineChart/>,name:"Bar Charts",page:"/bar charts"}
-       ,{icon:<FcProcess/>,name:"pie charts",page:"/pie charts"}
-       ,{icon:<FcElectricalThreshold/>,name:"line charts",page:"/line charts"}
-       ,{icon:<FcDoughnutChart/>,name:"geograph charts",page:"/geograph charts"}]
+        {icon:<FcLineChart/>,name:"Bar Charts",page:"5"}
+       ,{icon:<FcProcess/>,name:"pie charts",page:"6"}
+       ,{icon:<FcElectricalThreshold/>,name:"line charts",page:"7"}
+       ,{icon:<FcDoughnutChart/>,name:"geograph charts",page:"8"}]
     }
 
 ]

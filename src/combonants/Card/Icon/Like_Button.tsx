@@ -10,7 +10,9 @@ function Like_Button({datause}:any) {
   const selectData=useSelector((state:any)=>(state));
   const dispatch=useDispatch();
   const loginContext=useContext(Login_Create_Context);
-  const {id,image,name,price}=datause
+  const{description,id,postImages,productName,Price,quantity,categories,postId}=datause;
+  let image=postImages[0].ImageId
+
 
 
 
@@ -33,7 +35,7 @@ function Like_Button({datause}:any) {
 }
 
   return (
-      <div className='specific-item' onClick={likeProduct} datatype={`${id}###${image}###${name}###${price}`}>
+      <div className='specific-item' onClick={likeProduct} datatype={`${id}###${image}###${productName}###${Price}`}>
         <span><GiSelfLove/></span> <p>Favorate</p>
       </div>
     )

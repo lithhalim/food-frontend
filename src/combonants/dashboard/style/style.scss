@@ -6,12 +6,26 @@ $color1:rgb(83, 83, 83);
     display: flex;  justify-content: space-between; color: $color1;
     background-color: $background;
 
+
+
     .container-header{
-        padding: 10px; margin-bottom: 15px;
+        padding: 10px; padding: 20px 50px; text-align: end;
+        display: flex; justify-content: space-between;color:black;
+        .icon-section{
+            display: flex; align-items: center;
+            img{
+                width: 35px; height: 35px; border-radius: 50%;
+            }    
+        }
+        span {
+            cursor: pointer; font-size: 1.7em; display: none;
+        }
         h3 {
-            font-size: 1.5em;
+            font-size: 1.4em;color:black;
         }
     }
+
+
     .side-bar-section{
         width: 17vw;
     }
@@ -19,7 +33,7 @@ $color1:rgb(83, 83, 83);
         width: 80vw; margin-right: 20px;
     }
     .first-charts{
-        margin-top: 50px;flex-wrap: wrap;
+        margin-top: 20px;flex-wrap: wrap;
         display: flex; justify-content: space-around;
     }
 }
@@ -55,5 +69,14 @@ $color1:rgb(83, 83, 83);
         .all-item-dashbard{
             width: 95vw; margin-left: 15px;
         }
+
+        .container-header{
+            span { 
+                display: block;
+            }
+        }
+    
     }
+
+
 }

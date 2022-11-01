@@ -1,0 +1,29 @@
+@use "../../../main-style/style.scss";
+.tradein-container .first-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px;
+}
+
+.tradein-container .first-section .text-area {
+  margin-bottom: 50px;
+}
+
+.tradein-container .first-section .text-area li {
+  padding: 5px 0px;
+  font-size: 1.5em;
+}
+
+.tradein-container .first-section img {
+  width: 400px;
+  height: 350px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 import React from 'react';
 import './style/style.scss'
 
-function Loading() {
+function Loading_Section() {
   return (
     <div className="spinner-container">
         <div className="spinner"></div>
@@ -9,4 +9,4 @@ function Loading() {
   )
 }
 
-export default Loading
+export default Loading_Section

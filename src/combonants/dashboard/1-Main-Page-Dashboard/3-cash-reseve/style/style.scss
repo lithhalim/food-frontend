@@ -1,0 +1,10 @@
+.container-cash{
+   width:250px ; height: 250px;
+   margin-top: 50px;
+}
+@media screen and (max-width:500px) {
+    .container-cash{
+        width: 300px;
+    }
+}
+

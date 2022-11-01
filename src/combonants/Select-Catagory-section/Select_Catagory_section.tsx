@@ -2,12 +2,37 @@ import React,{useContext,useEffect,useState} from 'react'
 import Card_Section from '../Card/Card';
 import "./style/style.scss"
 
-import MainData from '../../DataUse/FoodData';
 import DataChange from "./search-section/2-select-section/Select_Section"
+import { Page_Contextapi } from '../../context-api/Select_catagory';
+
+import {useQuery} from "@tanstack/react-query";
+import axios from 'axios';
+import Loading_Section from '../loading-section/loading';
+import Page_Not_Found from '../page-not-found/Page_Not_Found';
+
 
 function Select_Catagory_section() {
 
-  const [state,setstate]=useState("show filter")
+  const [state,setstate]=useState("show filter");
+  const Page_Contextapi_Catagory=useContext(Page_Contextapi);
+
+
+  function usePosts() {
+    return useQuery([`catagory${Page_Contextapi_Catagory.Selectcatagory}`], async () => {
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}getpostesCatagory/${Page_Contextapi_Catagory.Selectcatagory}`
+      );
+      return data;
+    });
+  }  
+
+  const { status, data, error, isFetching } = usePosts();
+
+  console.log(data)
+  
+  if(isFetching)return<Loading_Section/>
+  if(error)return<Page_Not_Found/>
+
 
 
   const getDataSelect=(data:any)=>{
@@ -36,7 +61,7 @@ function Select_Catagory_section() {
         <div className='catagory-section'>
           <DataChange getDataSelect={getDataSelect}/>
             <div className='container-item'>
-                {MainData.map((data,i)=>(<Card_Section key={i} datause={data}/>))}
+                {data!==undefined?  data.map((data:any,i:any)=>(<Card_Section key={i} datause={data}/>)):<></>}
             </div>
         </div>
     </div>

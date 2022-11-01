@@ -1,0 +1,11 @@
+.all-item-dashboard-container{
+    margin-top: 10px;
+    .container-allItem{
+        height: 82vh; width: 97%;
+        .item-container-product{
+            img {
+                width: 80px; height: 80px; border-radius: 50%; cursor: pointer;
+            }
+        }
+    }
+}

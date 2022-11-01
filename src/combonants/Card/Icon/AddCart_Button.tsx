@@ -7,7 +7,9 @@ import { addtocart, modifyquantity } from '../../../redux/addToCart';
 
 
 function AddCart_Button({datause}:any) {
-  const{discription,id,image,name,price,quantity}=datause
+  const{description,id,postImages,productName,Price,quantity,categories,postId}=datause;
+  let image=postImages[0].ImageId
+
   const dispatch=useDispatch();
   const selectData=useSelector((state:any)=>(state))
 
@@ -25,7 +27,7 @@ function AddCart_Button({datause}:any) {
     }
 
   return (
-    <div className='specific-item' onClick={addToCart} datatype={`${discription}###${id}###${image}###${name}###${price}###${quantity}`}><span><HiShoppingCart/></span> <p>AddCart</p></div>
+    <div className='specific-item' onClick={addToCart} datatype={`${description}###${id}###${image}###${productName}###${Price}###${quantity}`}><span><HiShoppingCart/></span> <p>AddCart</p></div>
     )
 }
 

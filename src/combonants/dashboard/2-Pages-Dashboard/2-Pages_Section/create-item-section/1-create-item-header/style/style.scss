@@ -1,0 +1,33 @@
+@use "../../../../main-style/style.scss";
+
+$blue:black;
+
+.header-trader-section {
+    margin-top: 20px; width: 438px;
+    h3 {
+        padding: 30px 40px ; font-size: 1.2em; color: black; margin-left: 35px; 
+    }
+    .item-section {
+        display: flex; justify-content: space-between; position: relative;
+        li{
+            &::after{
+                content: "";
+                width: 300px; height: 3px; background-color: $blue; position: absolute;
+                left: 63px; top: 14px;
+            }
+        }
+        .container {
+            text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            position: relative;
+            
+            .firstNumber ,.secandNumber {
+                 background-color: $blue; border-radius: 50%; color: white;
+                width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;
+                margin-bottom: 10px;
+            }
+            p{
+                color: black;
+            }
+        }
+    }
+}

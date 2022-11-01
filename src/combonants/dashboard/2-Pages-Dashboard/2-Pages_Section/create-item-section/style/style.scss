@@ -1,0 +1,35 @@
+@use "../../../main-style/style.scss";
+.tradein-container{
+    position: relative;
+    .main-image {
+         width: 250px; height: 120px; display: block; margin-right: auto; margin-left: 80px;
+    }
+    .select-image-side-section{
+        position: absolute; right: 0; top: 50px; width: 400px; height: 60vh;
+    }
+
+    .first-section {
+        display: flex; justify-content: space-around; align-items: center;
+        flex-wrap: wrap;  
+        .text-area {
+            margin-bottom: 20px;
+            li{
+                padding: 5px 0px; font-size: 1.5em;
+            }
+           
+        }
+        img {
+             width: 400px; height: 350px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width:1200px) {
+    .tradein-container{
+        .select-image-side-section{
+            display: none;
+        }
+    }
+}

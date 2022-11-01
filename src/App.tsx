@@ -18,29 +18,42 @@ import Select_Page_Section from './combonants/Select-Page-Section/Select_Page_Se
 import Footer_Section from './combonants/footer/Footer_Section';
 import Select_Catagory_section from './combonants/Select-Catagory-section/Select_Catagory_section';
 import Main_Dashboard from './combonants/dashboard/Main-Dashboard';
+import Create_Item_Section from './combonants/dashboard/2-Pages-Dashboard/2-Pages_Section/create-item-section/Create_Section_Main';
+import { Trade_Information_Provider } from './context-api/Select-Trade';
+
+
+import {QueryClient,QueryClientProvider} from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
 
 
 
 
 function App() {
   return (
-        <Provider store={store}>
-              <Login_Provider>
-                  <PageContext_Provider>
-                      <BrowserRouter>
-                        <Routes>
-                          <Route path='/' element={<><Header_Main/><Slider_Homepage/><Arabic_Food datause="first"/> <Slider_Specific/><Arabic_Food datause="last"/> <Slider_Specific/> <Signin_Section_Have/><Signup_Section/>  <Footer_Section/></>}/>
-                            <Route path='/addCart' element={<><Header_Main/> <Add_To_Card/> <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
-                              <Route path='/favorate' element={<><Header_Main/> <Favorate_Product/> <Signin_Section_Have/><Signup_Section/><Footer_Section/> </>}/>
-                                <Route path='/dashboard' element={<> <Main_Dashboard/> </>}/>
-                              <Route path='/page' element={<> <Header_Main/><Select_Page_Section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
-                            <Route path='/catagory' element={<> <Header_Main/><Select_Catagory_section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
-                          <Route path='*' element={<><Page_Not_Found/></>}/>
-                        </Routes>
-                      </BrowserRouter>
-                  </PageContext_Provider>
-            </Login_Provider>
-        </Provider>
+    <QueryClientProvider client={queryClient}>
+            <Provider store={store}>
+                  <Trade_Information_Provider>
+                            <Login_Provider>
+                                <PageContext_Provider>
+                                    <BrowserRouter>
+                                      <Routes>
+                                        <Route path='/' element={<><Header_Main/><Slider_Homepage/><Arabic_Food datause="first"/> <Slider_Specific datause="Populer"/><Arabic_Food datause="last"/> <Slider_Specific datause="Most Order"/> <Signin_Section_Have/><Signup_Section/>  <Footer_Section/></>}/>
+                                          <Route path='/addCart' element={<><Header_Main/> <Add_To_Card/> <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
+                                            <Route path='/favorate' element={<><Header_Main/> <Favorate_Product/> <Signin_Section_Have/><Signup_Section/><Footer_Section/> </>}/>
+                                              <Route path='/creat' element={<Create_Item_Section/>}/>
+                                              <Route path='/dashboard' element={<> <Main_Dashboard/> </>}/>
+                                            <Route path='/page' element={<> <Header_Main/><Select_Page_Section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
+                                          <Route path='/catagory' element={<> <Header_Main/><Select_Catagory_section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
+                                        <Route path='*' element={<><Page_Not_Found/></>}/>
+                                      </Routes>
+                                    </BrowserRouter>
+                                </PageContext_Provider>
+                          </Login_Provider>
+                    </Trade_Information_Provider>
+            </Provider>
+        </QueryClientProvider>
   );
 }
 
