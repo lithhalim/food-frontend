@@ -106,3 +106,49 @@
         }
     }
 }
+
+
+
+
+
+//------------------------------------------comment section ---------------------------------------------//
+.comment-container{
+    padding: 10px;  width: 60vw;
+    margin-top: 100px;
+
+    .input-section{
+        .first{
+            display: flex; width: 100%;
+            textarea{width: 53.9vw; height: 25vh; padding:15px ; font-size: 1.2em; font-weight: bold;}
+        }
+        img {
+            width: 50px ;height: 50px; border-radius: 50%; margin-right: 10px;
+        }
+        .secand {
+            font-weight: bold;
+            display: flex; align-items: center; justify-content: end;
+            text-transform: capitalize;
+            p{padding: 8px 30px; border-radius: 5px; } button {padding: 8px 30px; border-radius: 5px; background-color: black;color: white; cursor: pointer; }
+        }
+    }
+    .container-item{
+        display: flex; margin-bottom: 15px;
+        p{
+            &:first-child{font-weight: bold;} padding: 5px;
+        }
+        img {
+            width: 35px; height: 35px; border-radius: 50%; margin-right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    .comment-container{
+        width: 90vw;
+        .input-section{
+            .first{
+                textarea{width: 81vw; height: 25vh;}
+            }}
+    
+    }
+}

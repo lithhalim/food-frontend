@@ -9,6 +9,7 @@ import axios from 'axios';
 import Page_Not_Found from '../page-not-found/Page_Not_Found';
 import Loading_Section from '../loading-section/loading';
 import { Page_Contextapi } from '../../context-api/Select_catagory';
+import Comment_Section from './Comment_Section';
 
 
 
@@ -32,6 +33,7 @@ function Select_Page_Section() {
       if(isFetching)return<Loading_Section/>
       if(error)return<Page_Not_Found/>
 
+
     
 
   return (
@@ -40,16 +42,16 @@ function Select_Page_Section() {
         <>
         <div className='first-section'>
                 <div className='image-container'>
-                    <img src={data.postImages[0].ImageId} alt="" />
+                    <img src={data[0].postImages[0].ImageId} alt="" />
                 </div>
                 <ul className='text-container'>
-                    <li><h3>{data.productName}</h3></li>
+                    <li><h3>{data[0].productName}</h3></li>
                     <li ><p >new product</p></li>
-                    <li><h3>Price : {data.Price} JOD</h3></li>
+                    <li><h3>Price : {data[0].Price} JOD</h3></li>
 
                     <li className='icon-section'>
-                        <AddCart_Button datause={data}/>
-                        <Like_Button datause={data}/>
+                        <AddCart_Button datause={data[0]}/>
+                        <Like_Button datause={data[0]}/>
                     </li>
                     <li>
                         <div className='delevery'>
@@ -58,12 +60,14 @@ function Select_Page_Section() {
                             <p className='container'><span><FcIdea/></span> <p>If you order from more than one branch, this will cancel the free delivery and increase the waiting time until the food arrives to you, thank you</p></p>
                         </div>
                     </li>
-                    <li><span><FcViewDetails/></span> <p className='discription '>{data.description} </p></li>
+                    <li><span><FcViewDetails/></span> <p className='discription '>{data[0].description} </p></li>
 
                 </ul>
         </div>
 
-        <Slider_Specific datause={data.popularity}/>
+        <Slider_Specific datause={data[0].popularity}/>
+        <Comment_Section datause={data[0]}/>
+
        </>:<></>} 
     </div>
   )

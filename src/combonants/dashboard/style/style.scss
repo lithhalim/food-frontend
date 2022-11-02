@@ -66,6 +66,14 @@ $color1:rgb(83, 83, 83);
         .side-bar-section{
             display: none;
         }
+        .side-bar-section.active {
+            display: block; position: fixed; left: 0; top: 60px;
+            background-color: white; width: 220px;z-index: 1000000000000000;
+            .header-dashboard{
+                display: none;
+            }
+            text-align: center;
+        }
         .all-item-dashbard{
             width: 95vw; margin-left: 15px;
         }
