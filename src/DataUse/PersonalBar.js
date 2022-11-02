@@ -1,8 +1,8 @@
 const PersonalBar=[{
-    name:"My orders",type:"/myorders"
+    name:"My orders",type:"/addCart"
 
 },{
-    name:"My Points",type:"/mypoints"
+    name:"My Points",type:"/addCart"
 },{
     name:"Logout",type:"Logout"
 }]

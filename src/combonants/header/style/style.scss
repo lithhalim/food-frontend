@@ -121,3 +121,17 @@
         }
     }
 }
+
+
+
+//------------------------------------------search data sectioln------------------------------------------//
+.data-search-item{
+    position: absolute; top: 88px; left: -180px; background-color: white;
+    width: 320px; border-radius: 5px;
+    p{
+        font-size: .7em; padding: 5px; 
+        &:hover{
+            background-color: silver;
+        }
+    }
+}

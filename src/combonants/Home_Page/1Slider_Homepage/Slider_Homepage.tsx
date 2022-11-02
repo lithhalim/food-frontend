@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import  { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import MainData from '../../../DataUse/Home_SliderData';
@@ -12,16 +12,24 @@ import "./style/style.scss";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import { Page_Contextapi } from '../../../context-api/Select_catagory';
+import { useNavigate } from "react-router-dom";
 
 
-
-//go To Select Type 
-const Gotoshop=(e:any)=>{
-
-}
 
 
 function Slider_Homepage() {
+  const Page_ContextapiType=useContext(Page_Contextapi);
+  const Navi=useNavigate()
+  
+  //go To Select Type 
+  const Gotoshop=(event:any)=>{
+    let data=event.target.getAttribute("datatype")
+    Page_ContextapiType.setSelectcatagory(data)
+    Navi("/catagory")
+  }
+
+
   return (
     <div className='swiper-container-all'>
         <Swiper
@@ -34,14 +42,14 @@ function Slider_Homepage() {
             speed={3000}
             autoplay={{ delay: 3000 }}
             >
-              {MainData.map(({image,header,discription},i)=>(
+              {MainData.map(({image,header,discription,page},i)=>(
                     <SwiperSlide key={i}>
                         <div className='sliderItem'>
                             <img src={image} alt="" />
                               <motion.div className='text-area' >
                                     <h3>{header}</h3>
                                     <p>{discription}</p>
-                                    <button onClick={Gotoshop}> SHOP NOW</button>
+                                    <button onClick={Gotoshop} datatype={page} style={{cursor:"pointer"}}> SHOP NOW {page}</button>
                             </motion.div>
                         </div>
                     </SwiperSlide>              
