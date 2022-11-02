@@ -3,11 +3,13 @@ import image from "../../../assest/arabic/arabicfood.jpg";
 import image2 from "../../../assest/arabic/food2.jpg"
 import {motion} from "framer-motion";
 import "./style/style.scss";
+import { useNavigate } from 'react-router-dom';
 
 
 
 function Arabic_Food({datause}) {
   const [DataWillUse,setdatause]=useState(false)
+  const Navi=useNavigate()
 
   useEffect(()=>{
     switch(datause) {
@@ -28,7 +30,7 @@ function Arabic_Food({datause}) {
                 <h2>{DataWillUse.name}</h2>
                 <p>{DataWillUse.discription}</p>
                 <motion.h3 initial={{opacity:0,y:"-50px"}} animate={{opacity:1,y:"0px" }} transition={{duration:3,type:"tween",repeat:Infinity,repeatType:"mirror" }}>Now we have discounts up to 30% what are you waiting for come order from here</motion.h3>
-                <motion.button initial={{opacity:0,x:"-400px"}} animate={{opacity:1,x:"0px" }} transition={{duration:1}}>Shop Now</motion.button>
+                <motion.button initial={{opacity:0,x:"-400px"}} animate={{opacity:1,x:"0px" }} transition={{duration:1}} onClick={()=>{Navi("/page")}}>Shop Now</motion.button>
             </div>
           {datause=="last"?<div className='image-container'><img src={DataWillUse.image} alt="" /></div>:<></>}
           </>:<></>}

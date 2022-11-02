@@ -7,6 +7,9 @@ let selectedData:any={}
 function Select_Section({getDataSelect}:any) {
 
     const DataChange=(event:any)=>{
+        if(event.target.name=="priceStart"||event.target.name=="priceEnd"){
+            
+        }else{
             let Catagory=event.target.name.split("###")[0]
             let selectItem=event.target.name.split("###")[1]
 
@@ -28,6 +31,7 @@ function Select_Section({getDataSelect}:any) {
 
             getDataSelect(selectedData)
 
+        }
     }
   return (
     <form onChange={DataChange} className="container-all-search">
@@ -43,8 +47,8 @@ function Select_Section({getDataSelect}:any) {
 
         <div className='price-section'>
             <label htmlFor=""> Price Range</label>
-                <input type="number" defaultValue="0"   placeholder='Start Price' />
-                <input type="number" defaultValue="1000"  placeholder='end Price' />
+                <input type="number" defaultValue="0"   placeholder='Start Price' name="priceStart" />
+                <input type="number" defaultValue="1000"  placeholder='end Price'  name="priceEnd"/>
             <p className='show-result-search-item-add'>
                         Data Will Show Direct
             </p>

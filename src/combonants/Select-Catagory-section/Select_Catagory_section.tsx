@@ -13,32 +13,45 @@ import Page_Not_Found from '../page-not-found/Page_Not_Found';
 
 function Select_Catagory_section() {
 
-  const [state,setstate]=useState("show filter");
+  const [state,setstate]=useState<string>("show filter");
   const Page_Contextapi_Catagory=useContext(Page_Contextapi);
+  const [DataWillUse,setDataWillUse]=useState<any>()
 
 
+
+
+  
   function usePosts() {
-    return useQuery([`catagory${Page_Contextapi_Catagory.Selectcatagory}`], async () => {
+
+    return useQuery([Page_Contextapi_Catagory.Selectcatagory], async () => {
       const { data } = await axios.get(
         `${process.env.REACT_APP_API}getpostesCatagory/${Page_Contextapi_Catagory.Selectcatagory}`
       );
+      setDataWillUse(data)
       return data;
     });
   }  
 
   const { status, data, error, isFetching } = usePosts();
 
-  console.log(data)
+
+
   
   if(isFetching)return<Loading_Section/>
   if(error)return<Page_Not_Found/>
 
 
 
-  const getDataSelect=(data:any)=>{
+  //get the Data From Chiled Search Filter
+  const getDataSelect=(event:any)=>{
+      let newData=data.filter((datanew:any,i:any)=>(
+        event[Object.keys(event)[0]].includes(datanew[Object.keys(event)[0]])
+      ))
+      
+      setDataWillUse(newData)
 
-    console.log(data)
   }
+
 
 
 
@@ -53,6 +66,9 @@ function Select_Catagory_section() {
 
 
 
+
+
+
   return (
     <div className='container-catagory'>
       
@@ -61,7 +77,7 @@ function Select_Catagory_section() {
         <div className='catagory-section'>
           <DataChange getDataSelect={getDataSelect}/>
             <div className='container-item'>
-                {data!==undefined?  data.map((data:any,i:any)=>(<Card_Section key={i} datause={data}/>)):<></>}
+                {DataWillUse!==undefined?  DataWillUse.map((data:any,i:any)=>(<Card_Section key={i} datause={data}/>)):<></>}
             </div>
         </div>
     </div>
