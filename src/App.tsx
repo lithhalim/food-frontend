@@ -9,9 +9,9 @@ import { PageContext_Provider } from './context-api/Select_catagory';
 
 import { store } from './redux/store/store'
 import { Provider } from 'react-redux'
-import Signin_Section_Have from './combonants/authintication-section/sign-in-section/Signin-Section';
+import Signin_Section_Have from './combonants/authintication-section/sign-in-section/2-Signin-Section';
 import { Login_Provider } from './context-api/authntication-context';
-import Signup_Section from './combonants/authintication-section/sign-up-section/Signup_Section';
+import Signup_Section from './combonants/authintication-section/sign-up-section/2-Signup_Section';
 import Add_To_Card from './combonants/Add-Cart-Section/Add_Cart_Section';
 import Favorate_Product from './combonants/Favorate-Product-Section/Favorate_ProductSection';
 import Select_Page_Section from './combonants/Select-Page-Section/Select_Page_Section';
