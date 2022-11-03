@@ -104,7 +104,7 @@ const columns = [
 
 
   return (
-    <div className='checkout-container'>
+    <div className='checkout-container-payment-section'>
         <div className='container-add-cart'>
                 <div className='header-addtocard'>
                     <p> Number Product:{selectData.addToCartSlice.value}</p> 

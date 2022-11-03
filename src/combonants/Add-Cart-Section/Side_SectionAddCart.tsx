@@ -1,9 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 import PayMethod from '../../DataUse/Paymethod';
 
 function Side_SectionAddCart({totalPrice}:any) {
+  const Navi=useNavigate()
+
+  const gotopage=()=>{
+    Navi("/checkout")
+  }
   return (
   <div className='checkou-button-section'>
     <div className='Order-container'>
@@ -15,7 +21,7 @@ function Side_SectionAddCart({totalPrice}:any) {
                 <p>Reward 140 Points</p>
             </li>
         </ul>
-        <button>Checkout Now</button>
+        <button onClick={gotopage}>Checkout Now</button>
         <p>Apply aCoupon Code Foodzi point next step</p>
     </div>
     <div className='AcceptOrder'>

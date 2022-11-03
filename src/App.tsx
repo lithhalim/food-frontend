@@ -23,6 +23,7 @@ import { Trade_Information_Provider } from './context-api/Select-Trade';
 
 
 import {QueryClient,QueryClientProvider} from "@tanstack/react-query";
+import Checkou_Page from './combonants/checkout-section/Checkou_Page';
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ function App() {
                                           <Route path='/addCart' element={<><Header_Main/> <Add_To_Card/> <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
                                             <Route path='/favorate' element={<><Header_Main/> <Favorate_Product/> <Signin_Section_Have/><Signup_Section/><Footer_Section/> </>}/>
                                               <Route path='/creat' element={<Create_Item_Section/>}/>
+                                                <Route path='/checkout' element={<Checkou_Page/>}/>
                                               <Route path='/dashboard' element={<> <Main_Dashboard/> </>}/>
                                             <Route path='/page' element={<> <Header_Main/><Select_Page_Section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
                                           <Route path='/catagory' element={<> <Header_Main/><Select_Catagory_section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
