@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import axios from 'axios';
 
 
 const initialState = {
@@ -21,6 +22,8 @@ export const addToCartSlice = createSlice({
         state.value=state.value+=1;
         state.allProduct=[...state.allProduct,action.payload];
         window.localStorage.AddToCart=JSON.stringify(state);
+
+        // axios.post(`${process.env.REACT_APP_API}addBasket`,action.payload)
     },
     removeFromCart: (state, action) => {
         state.value=state.value-=1;

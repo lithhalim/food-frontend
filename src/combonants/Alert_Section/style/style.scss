@@ -1,0 +1,22 @@
+.Item_Alert{
+    .header-Alert{
+        display: flex; justify-content: space-between;
+        span {
+            color: black; font-size: 1.5em; cursor: pointer;
+        }
+
+
+    }
+    .AlertValue{
+        width: 250px; font-weight: bold; margin-left: auto; margin-right: auto;
+        text-align: center;
+    }
+
+    img {
+        width: 250px; height: 150px; display: block; margin-left: auto; margin-right: auto;
+    }
+        position: fixed; top: 35%; left: 35%; transform: translate(-50%,-50%);
+        padding: 10px; background-color:white; z-index: 1000000000000;
+        border: 4px  solid black;width: 400px; border-radius: 10px;
+}
+

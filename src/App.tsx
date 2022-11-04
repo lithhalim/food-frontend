@@ -24,6 +24,8 @@ import { Trade_Information_Provider } from './context-api/Select-Trade';
 
 import {QueryClient,QueryClientProvider} from "@tanstack/react-query";
 import Checkou_Page from './combonants/checkout-section/Checkou_Page';
+import Alert_Section from './combonants/Alert_Section/Alert_Item';
+import { Alert_Provider } from './context-api/Alert-Context';
 
 const queryClient = new QueryClient();
 
@@ -35,25 +37,27 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
             <Provider store={store}>
-                  <Trade_Information_Provider>
-                            <Login_Provider>
-                                <PageContext_Provider>
-                                    <BrowserRouter>
-                                      <Routes>
-                                        <Route path='/' element={<><Header_Main/><Slider_Homepage/><Arabic_Food datause="first"/> <Slider_Specific datause="Populer"/><Arabic_Food datause="last"/> <Slider_Specific datause="Most Order"/> <Signin_Section_Have/><Signup_Section/>  <Footer_Section/></>}/>
-                                          <Route path='/addCart' element={<><Header_Main/> <Add_To_Card/> <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
-                                            <Route path='/favorate' element={<><Header_Main/> <Favorate_Product/> <Signin_Section_Have/><Signup_Section/><Footer_Section/> </>}/>
-                                              <Route path='/creat' element={<Create_Item_Section/>}/>
-                                                <Route path='/checkout' element={<Checkou_Page/>}/>
-                                              <Route path='/dashboard' element={<> <Main_Dashboard/> </>}/>
-                                            <Route path='/page' element={<> <Header_Main/><Select_Page_Section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
-                                          <Route path='/catagory' element={<> <Header_Main/><Select_Catagory_section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/></>}/>
-                                        <Route path='*' element={<><Page_Not_Found/></>}/>
-                                      </Routes>
-                                    </BrowserRouter>
-                                </PageContext_Provider>
-                          </Login_Provider>
-                    </Trade_Information_Provider>
+              <Alert_Provider>
+                    <Trade_Information_Provider>
+                              <Login_Provider>
+                                  <PageContext_Provider>
+                                      <BrowserRouter>
+                                        <Routes>
+                                          <Route path='/' element={<> <Header_Main/><Slider_Homepage/><Arabic_Food datause="first"/> <Slider_Specific datause="Populer"/><Arabic_Food datause="last"/> <Slider_Specific datause="Most Order"/> <Signin_Section_Have/><Signup_Section/>  <Footer_Section/><Alert_Section/> </>}/>
+                                            <Route path='/addCart' element={<><Header_Main/> <Add_To_Card/> <Signin_Section_Have/><Signup_Section/> <Footer_Section/><Alert_Section/> </>}/>
+                                              <Route path='/favorate' element={<><Header_Main/> <Favorate_Product/> <Signin_Section_Have/><Signup_Section/><Footer_Section/> <Alert_Section/></>}/>
+                                                <Route path='/creat' element={<><Create_Item_Section/><Alert_Section/></>}/>
+                                                  <Route path='/checkout' element={<><Checkou_Page/><Alert_Section/></>}/>
+                                                <Route path='/dashboard' element={<> <Main_Dashboard/> <Alert_Section/></>}/>
+                                              <Route path='/page' element={<> <Header_Main/><Select_Page_Section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/><Alert_Section/></>}/>
+                                            <Route path='/catagory' element={<>  <Header_Main/><Select_Catagory_section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/><Alert_Section/> </>}/>
+                                          <Route path='*' element={<><Page_Not_Found/></>}/>
+                                        </Routes>
+                                      </BrowserRouter>
+                                  </PageContext_Provider>
+                            </Login_Provider>
+                      </Trade_Information_Provider>
+                    </Alert_Provider>
             </Provider>
         </QueryClientProvider>
   );

@@ -5,16 +5,6 @@ import Like_Button from './Icon/Like_Button';
 import ViewPage_Button from './Icon/ViewPage_Button';
 
 
-interface DataInter{
-    image:string;
-    id:number;
-    name:string;
-    discription?:string;
-    price?:number;
-    quantity?:number;
-}
-
-
 function Card_Section({datause}:any) {
    const {postImages,productName}=datause
   return (

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState,useContext } from 'react';
 
 //React Data Grid Section 
 import { DataGrid } from '@mui/x-data-grid';
 
+import "./style/style.scss"
 //React Icons Section part
 import {BsFillPatchMinusFill} from "react-icons/bs";
 import {BsFillPatchPlusFill} from "react-icons/bs"
@@ -11,6 +12,14 @@ import "./style/style.scss"
 import { useDispatch, useSelector } from 'react-redux';
 import { modifyquantity, modifyquantitydecrese, removeFromCart } from '../../redux/addToCart';
 import Side_SectionAddCart from './Side_SectionAddCart';
+import { Alert_Create_Context } from '../../context-api/Alert-Context';
+
+
+
+import DataAlert from '../../DataUse/Alert_Data';
+
+
+
 
 
 
@@ -21,6 +30,12 @@ export default function Add_To_Card() {
   //Get The Data From Redux
   const selectData=useSelector((state:any)=>(state))
   const dispatch=useDispatch();
+  const Alert_Create_Context_Section=useContext(Alert_Create_Context);
+
+
+
+
+
 
 
   //Get The Total Price Of The Product
@@ -35,8 +50,16 @@ export default function Add_To_Card() {
   //Increse and Decrease Button
   const increseQuntity=(event:any)=>{
     let [id,image,name,price]=event.currentTarget.getAttribute("datatype").split("###");
-    dispatch(modifyquantity({id:id,image:image,name:name,price:price}))
 
+
+    let ItemSelect=selectData.addToCartSlice.allProduct.filter((data:any)=>(data?.id==id))
+    //check Number Of Item Ihave In system 
+    if((Number(ItemSelect[0].quantity)-Number(ItemSelect[0].selectItemQuentuty))===0){
+      Alert_Create_Context_Section.setRunAlert(DataAlert[0])
+    }else{
+      dispatch(modifyquantity({id:id,image:image,name:name,price:price}))
+    }
+  
   }
 
   const decreseQuntity=(event:any)=>{
@@ -102,9 +125,8 @@ const columns = [
   const rows = selectData.addToCartSlice.allProduct
   
 
-
   return (
-    <div className='checkout-container-payment-section'>
+    <div className='checkout-container'>
         <div className='container-add-cart'>
                 <div className='header-addtocard'>
                     <p> Number Product:{selectData.addToCartSlice.value}</p> 

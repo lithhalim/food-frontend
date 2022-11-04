@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import "./style/style.scss";
 import {Trade_Information_Context} from "../../../../../../context-api/Select-Trade"
-import Car_Details2 from './item_Details2';
+import Car_Details2 from './Item_Details_Section2/1-item_Details2';
 
 
 
