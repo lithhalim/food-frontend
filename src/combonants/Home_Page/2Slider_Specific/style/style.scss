@@ -4,13 +4,20 @@
     text-transform: uppercase;
     &::after{
         content: "";
-        width: 40vw; height: 2px; background-color: black; position: absolute; top: 50px;
+        width: 350px; height: 2px; background-color: black; position: absolute; top: 50px;
         z-index: -1;
+        animation-name: headerLine;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
     }
     &::before{
         content: "";
-        width: 40vw; height: 2px; background-color: black; position: absolute; top: -25px;
+        width: 350px; height: 2px; background-color: black; position: absolute; top: -25px;
         z-index: -1;
+        animation-name: headerLine;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+
     }
 
 
@@ -44,3 +51,10 @@
     
     }
 }
+
+
+@keyframes headerLine {
+    from {width: 0px;background-color: silver;}
+    to {width: 350px;background-color: black;}
+  }
+  
