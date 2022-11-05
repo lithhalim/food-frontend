@@ -26,6 +26,7 @@ import {QueryClient,QueryClientProvider} from "@tanstack/react-query";
 import Checkou_Page from './combonants/checkout-section/Checkou_Page';
 import Alert_Section from './combonants/Alert_Section/Alert_Item';
 import { Alert_Provider } from './context-api/Alert-Context';
+import Admin_Page from './combonants/Admin-Form/Admin_Page';
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ function App() {
                                             <Route path='/addCart' element={<><Header_Main/> <Add_To_Card/> <Signin_Section_Have/><Signup_Section/> <Footer_Section/><Alert_Section/> </>}/>
                                               <Route path='/favorate' element={<><Header_Main/> <Favorate_Product/> <Signin_Section_Have/><Signup_Section/><Footer_Section/> <Alert_Section/></>}/>
                                                 <Route path='/creat' element={<><Create_Item_Section/><Alert_Section/></>}/>
+                                                  <Route  path='/admin' element={<><Admin_Page/></>}/>
                                                   <Route path='/checkout' element={<><Checkou_Page/><Alert_Section/></>}/>
                                                 <Route path='/dashboard' element={<> <Main_Dashboard/> <Alert_Section/></>}/>
                                               <Route path='/page' element={<> <Header_Main/><Select_Page_Section/>  <Signin_Section_Have/><Signup_Section/> <Footer_Section/><Alert_Section/></>}/>

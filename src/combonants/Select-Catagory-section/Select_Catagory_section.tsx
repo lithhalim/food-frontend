@@ -1,5 +1,4 @@
-import React,{useContext,useEffect,useState} from 'react'
-import Card_Section from '../Card/Card';
+import React,{useContext,useEffect,useState,Suspense} from 'react'
 import "./style/style.scss"
 
 import DataChange from "./search-section/2-select-section/Select_Section"
@@ -9,6 +8,9 @@ import {useQuery} from "@tanstack/react-query";
 import axios from 'axios';
 import Loading_Section from '../loading-section/loading';
 import Page_Not_Found from '../page-not-found/Page_Not_Found';
+
+
+const Cart_Load = React.lazy(() => import("../Card/Card"));
 
 
 function Select_Catagory_section() {
@@ -36,7 +38,6 @@ function Select_Catagory_section() {
 
 
 
-  
   if(isFetching)return<Loading_Section/>
   if(error)return<Page_Not_Found/>
 
@@ -77,7 +78,11 @@ function Select_Catagory_section() {
         <div className='catagory-section'>
           <DataChange getDataSelect={getDataSelect}/>
             <div className='container-item'>
-                {DataWillUse!==undefined?  DataWillUse.map((data:any,i:any)=>(<Card_Section key={i} datause={data}/>)):<></>}
+                {DataWillUse!==undefined?  DataWillUse.map((data:any,i:any)=>(
+                      <Suspense fallback={<div><img style={{width:"200px",height:"200px" }} src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="" /></div>}>
+                          <Cart_Load key={i} datause={data}/>
+                      </Suspense>              
+                )):<></>}
             </div>
         </div>
     </div>

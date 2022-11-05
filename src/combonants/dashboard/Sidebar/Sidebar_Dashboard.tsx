@@ -4,7 +4,7 @@ import Select_Dashboard_All_Data from './select-data-information';
 import "./style/style.scss"
 
 
-function Sidebar_Dashboard() {
+function Sidebar_Dashboard({datause}:any) {
     const Slider_Context=useContext(Trade_Information_Context);
 
     const gotopage=(event:any)=>{
@@ -13,8 +13,8 @@ function Sidebar_Dashboard() {
   return (
     <div className='side-bar-dashboard'>
         <div className='header-dashboard'>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg" alt="" />
-            <h3>Ronaldo do</h3>
+            <img src={datause.image} alt="" />
+            <h3>{datause.fullName}</h3>
             <p>Admin For Foodinzo Group</p>
         </div>
 

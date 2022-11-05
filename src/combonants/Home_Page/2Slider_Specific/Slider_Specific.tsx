@@ -1,5 +1,4 @@
-import React from 'react';
-import Card_Section from '../../Card/Card';
+import React,{Suspense} from 'react';
 import  {  A11y,Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {motion} from "framer-motion"
@@ -16,6 +15,8 @@ import {useQuery} from "@tanstack/react-query";
 import axios from 'axios';
 import Loading_Section from '../../loading-section/loading';
 import Page_Not_Found from '../../page-not-found/Page_Not_Found';
+
+const Cart_Load = React.lazy(() => import("../../Card/Card"));
 
 
 
@@ -54,7 +55,12 @@ function Slider_Specific({datause}:any) {
                     1250:{slidesPerView:6,spaceBetween:10},
                 }}
                 >
-                {data.map((datause:any,i:any)=>(<SwiperSlide key={i}> <Card_Section key={i} datause={datause}/></SwiperSlide>))}
+                {data.map((datause:any,i:any)=>(
+                <SwiperSlide key={i}> 
+                			<Suspense fallback={<div><img style={{width:"200px",height:"250px" }} src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="" /></div>}>
+                          <Cart_Load key={i} datause={datause}/>
+                      </Suspense>
+                </SwiperSlide>))}
             </Swiper>
         </div>
       :<></>}

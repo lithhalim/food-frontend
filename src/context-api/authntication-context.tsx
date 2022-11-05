@@ -10,12 +10,13 @@ export function Login_Provider(props:any) {
     const [signin,setsignin]=useState(false);
     const [signup,setsignup]=useState(false);
     const [forgetPassword,setforgetPassword]=useState(false);
+    const [accsisToken,setAccessToken]=useState(window.localStorage.saveaccisToken?JSON.parse(window.localStorage.saveaccisToken):false)
+    
     
 
 
-
   return (
-    <Login_Create_Context.Provider value={{AllUserDaata,setAllUserData,signin,setsignin,signup,setsignup,forgetPassword,setforgetPassword}}>
+    <Login_Create_Context.Provider value={{AllUserDaata,setAllUserData,signin,setsignin,signup,setsignup,forgetPassword,setforgetPassword,accsisToken,setAccessToken}}>
         {props.children}
     </Login_Create_Context.Provider>
   ) 

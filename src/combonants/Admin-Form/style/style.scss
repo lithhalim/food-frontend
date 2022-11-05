@@ -1,0 +1,36 @@
+.Admin-Login-conatiner{
+    margin: 30px 50px; box-shadow: 2px  2px 2px 2px silver;height: 90vh;
+    display: flex; justify-content: space-around; padding: 20px;
+    .image-container{
+        flex-basis: 50%; border-right: 2px solid silver; text-align: center;
+        img {
+            width: 50%; height: 50%; margin-top: 20vh;
+        }
+    }
+
+    .signin-admin-section{
+        flex-basis: 50%; text-align: center; margin-top: 20vh;
+        h3{
+            padding: 30px 100px; text-transform: capitalize; font-weight: bold; 
+            text-align: start;
+        }
+    }
+}
+@media screen and (max-width:900px) {
+    .Admin-Login-conatiner{
+        .image-container{display: none;}
+    }
+    .signin-admin-section{flex-basis: 100%;}
+}
+@media screen and (max-width:600px) {
+    .Admin-Login-conatiner{
+        .signin-admin-section{
+            flex-basis: 50%; text-align: center; margin-top: 15vh;
+            h3{
+                padding: 30px 10px; text-transform: capitalize; font-weight: bold; 
+                text-align: start;
+            }
+        }    
+
+    }
+}

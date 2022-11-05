@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext} from 'react';
 
 import {useQuery} from "@tanstack/react-query"
 import axios from 'axios';
@@ -6,13 +6,22 @@ import Loading_Section from '../../../loading-section/loading';
 import Page_Not_Found from '../../../page-not-found/Page_Not_Found';
 import { DataGrid } from '@mui/x-data-grid';
 import "./style/style.scss"
+import { Login_Create_Context } from '../../../../context-api/authntication-context';
 
 function Table_Get_Data({datause}:any) {
+  const Login_Create_ContextAuth=useContext(Login_Create_Context)
+
+
 
     function usePosts() {
         return useQuery([`getDataHave${datause}`], async () => {
           const { data } = await axios.get(
-            `${process.env.REACT_APP_API}getDataReguster/${datause}`
+            `${process.env.REACT_APP_API}getDataReguster/${datause}`,{
+              headers:{ 
+                'Content-Type': 'application/json' ,
+                'Accept': 'application/json',
+                "authorization":`Bearer ${Login_Create_ContextAuth.accsisToken }` }
+            }
           );
           return data;
         });
@@ -20,9 +29,7 @@ function Table_Get_Data({datause}:any) {
     
       const { status, data, error, isFetching } = usePosts();
 
-      console.log(data)
       
-      if(isFetching)return<Loading_Section/>
       if(error)return<Page_Not_Found/>
 
 

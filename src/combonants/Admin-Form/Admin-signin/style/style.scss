@@ -1,0 +1,19 @@
+.signin-container-admin{
+    input {
+        width: 400px; height:40px; margin-bottom: 10px; border-radius: 10px;
+        border: 1px solid black; padding: 10px;
+    }
+    button{
+        padding: 10px 45px; background-color: rgb(167, 109, 221); border-radius: 10px; border: 1px solid blueviolet;
+        font-weight: bold; color: white; font-size: 1.1em;margin-top: 10px; cursor: pointer;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .signin-container-admin{
+        input {
+            width: 300px; 
+        }
+    }
+    
+}
