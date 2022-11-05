@@ -38,7 +38,6 @@ function Select_Catagory_section() {
 
 
 
-  if(isFetching)return<Loading_Section/>
   if(error)return<Page_Not_Found/>
 
 
