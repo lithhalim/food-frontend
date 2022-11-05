@@ -34,6 +34,8 @@ export default function Add_To_Card() {
   
   console.log(selectData)
 
+  console.log(selectData)
+
 
 
 
