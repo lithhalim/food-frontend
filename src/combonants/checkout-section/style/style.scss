@@ -1,7 +1,14 @@
 @use "../../main-style/style.scss";
+
+.header-section-checkout{
+    margin-top: 30px; width: 350px; font-size: 1.2em; text-align: center;
+    margin-left: auto; margin-right: auto;
+}
+
 .checkout-container-All-payment{
     display: flex; justify-content: space-around; align-items: center;
-    padding: 30px 100px; flex-wrap: wrap; 
+    padding: 30px 100px; flex-wrap: wrap;  
+
 
     .payment-information {
         width: 450px; box-shadow: 2px 2px 2px 2px silver; padding: 30px;
@@ -81,7 +88,7 @@
 
 
 @media screen and (max-width:700px) {
-    .checkout-container {
-        padding: 100px 50px;
-    }
+    .checkout-container-All-payment{
+        padding: 30px 10px; 
+}
 }

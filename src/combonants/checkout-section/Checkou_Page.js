@@ -12,8 +12,8 @@ const connectionStrip=loadStripe(process.env.REACT_APP_STRIP_API)
 function Checkou_Page() {
   return (
     <Elements stripe={connectionStrip}>
-       <h2 style={{marginLeft:"auto",marginRight:"auto",width:"370px",marginTop:"30px"}}> Welcome to the payment page</h2>
-        <div className='checkout-container-All-payment'>
+       <h2  className="header-section-checkout"> Welcome to the payment page</h2>
+        <div className='checkout-container-All-payment' >
             <Payment_Information/>
             <Sale_Information/>
         </div>

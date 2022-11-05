@@ -76,12 +76,12 @@
 
 @media screen and (max-width:900px) {
     .checkout-container{
-        display: block;
+        display: block; padding: 0; 
         .container-add-cart {
-            width: 84vw;
+            width: 94vw; margin-left: auto; margin-right: auto;
         }
         .checkou-button-section{
-            width: 84vw; margin-top: 50px;border-radius: 5px;
+            width: 94vw; margin-top: 50px;border-radius: 5px;margin-right: auto; margin-left: auto;
             border: 1px solid rgba(192, 192, 192, 0.644); padding: 10px;
         }
     
@@ -90,17 +90,5 @@
 }
 
 
-@media screen and (max-width:500px) {
 
-    .checkout-container{
-        padding: 50px 5px;
-        .container-add-cart {
-            width: 99vw;
-        }
-        .checkou-button-section{
-            width: 99vw; padding: 5px;
-        }
-    
-    
-    }
-}
+

@@ -32,10 +32,6 @@ export default function Add_To_Card() {
   const dispatch=useDispatch();
   const Alert_Create_Context_Section=useContext(Alert_Create_Context);
   
-  console.log(selectData)
-
-  console.log(selectData)
-
 
 
 
