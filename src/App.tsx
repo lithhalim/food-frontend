@@ -7,6 +7,7 @@ import Arabic_Food from './combonants/Home_Page/3ArabicFood/Arabic_Food';
 import Page_Not_Found from './combonants/page-not-found/Page_Not_Found';
 import { PageContext_Provider } from './context-api/Select_catagory';
 
+
 import { store } from './redux/store/store'
 import { Provider } from 'react-redux'
 import Signin_Section_Have from './combonants/authintication-section/sign-in-section/2-Signin-Section';
@@ -27,6 +28,8 @@ import Checkou_Page from './combonants/checkout-section/Checkou_Page';
 import Alert_Section from './combonants/Alert_Section/Alert_Item';
 import { Alert_Provider } from './context-api/Alert-Context';
 import Admin_Page from './combonants/Admin-Form/Admin_Page';
+
+
 
 const queryClient = new QueryClient();
 

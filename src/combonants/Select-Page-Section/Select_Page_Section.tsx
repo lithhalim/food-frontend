@@ -14,13 +14,14 @@ import Comment_Section from './Comment_Section';
 
 
 
+
 function Select_Page_Section() {
 
     const Page_Contextapi_Select=useContext(Page_Contextapi)
 
 
     function usePosts() {
-        return useQuery([`getspecificpage${Page_Contextapi_Select.selectPage}`], async () => {
+        return useQuery([`getspecificpage`,Page_Contextapi_Select.selectPage], async () => {
           const { data } = await axios.get(
             `${process.env.REACT_APP_API}getproductpage/${Page_Contextapi_Select.selectPage}`
           );

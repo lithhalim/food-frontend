@@ -25,7 +25,7 @@ function Select_Catagory_section() {
   
   function usePosts() {
 
-    return useQuery([Page_Contextapi_Catagory.Selectcatagory], async () => {
+    return useQuery(["GetDataSpecificCatagoty",Page_Contextapi_Catagory.Selectcatagory], async () => {
       const { data } = await axios.get(
         `${process.env.REACT_APP_API}getpostesCatagory/${Page_Contextapi_Catagory.Selectcatagory}`
       );
